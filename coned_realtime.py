@@ -87,6 +87,24 @@ def get_realtime_electric_usage(jwt_tkn):
 
 
 if __name__ == "__main__":
+
+    """
+    For MFA Security Question, to set up your MFA secret (answer), log into coned.com, 
+    go to your profile and reset your 2FA method. 
+    When setting up 2FA again, there will be option to say you do not have texting on your phone. 
+    Select this and you should be able to use a security question instead.
+    
+    
+    For account uuid, log into coned.com then use the browser developer tools to search 
+    for a GET request to opower.com with the word utilityAccounts that 
+    looks like: https://cned.opower.com/ei/edge/apis/DataBrowser-v1/cws/utilities/cned/utilityAccounts/
+    ACCOUNT_UUID/reads?aggregateType=bill&includeEnhancedBilling=false&includeMultiRegisterData=false
+    
+    use_ce_device_id can be used to bypass the login process by providing a CE Device ID
+    
+    
+    """
+    
     username = "myemail@email.com"
     password = ""
     use_ce_device_id = True
